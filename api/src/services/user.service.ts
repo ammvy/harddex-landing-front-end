@@ -4,7 +4,7 @@ import type { FirebaseStorage } from '@infra/firebase/storage';
 import type { UserSelect } from '@infra/database/schema/user.schema';
 import { NotFoundError } from '@/errors/not-found.error';
 import { ValidationError } from '@/errors/validation.error';
-import type { CreateUserInput, UpdateUserInput } from '@/routes/schemas/user.schema';
+import type { CreateUserInput, UpdateUserInput } from '@/routes/dtos/user.schema';
 
 // ── Implementação ──
 export class UserService implements IUserService {

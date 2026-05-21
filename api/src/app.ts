@@ -6,14 +6,12 @@ import swaggerUi from "@fastify/swagger-ui";
 import { errorHandler } from "@/middlewares/error-handler";
 import { env } from "@/config/env";
 
-// Camadas
 import { UserDAO } from "@/dao/user.dao";
 import { UserRepository } from "@/repositories/user.repository";
 import { UserService } from "@/services/user.service";
 import { UserController } from "@/controllers/user.controller";
-import { userRoutes } from "@/routes/user.routes";
+import { globalRoutes } from "@/routes/index";
 
-// Firebase
 import { createDatabase } from "./infra/database/connection";
 import { initFirebase } from "./infra/firebase/admin";
 import { FirebaseStorage } from "./infra/firebase/storage";
@@ -61,7 +59,7 @@ export function buildApp() {
   const userController = new UserController(userService);
 
   // Rotas
-  app.register(userRoutes(userController), { prefix: "/api/v1" });
+  app.register(globalRoutes(userController), { prefix: "/api/v1" });
 
   return app;
 }

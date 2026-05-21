@@ -1,4 +1,4 @@
-import admin from 'firebase-admin';
+import admin from "firebase-admin";
 
 export class FirebaseStorage {
   private bucket() {
@@ -9,7 +9,11 @@ export class FirebaseStorage {
     }
   }
 
-  async upload(buffer: Buffer, path: string, contentType: string): Promise<string> {
+  async upload(
+    buffer: Buffer,
+    path: string,
+    contentType: string,
+  ): Promise<string> {
     const bucket = this.bucket();
     if (!bucket) {
       console.warn(`⚠️ Firebase is not initialized. Mocking upload of ${path}`);

@@ -1,5 +1,5 @@
 import type { UserSelect } from '@infra/database/schema/user.schema';
-import type { CreateUserInput, UpdateUserInput } from '@/routes/schemas/user.schema';
+import type { CreateUserInput, UpdateUserInput } from '@/routes/dtos/user.schema';
 
 export interface IUserService {
   getAll(): Promise<UserSelect[]>;
