@@ -26,7 +26,7 @@ export function buildApp() {
   app.setValidatorCompiler(validatorCompiler);
   app.setSerializerCompiler(serializerCompiler);
 
-  app.register(cors, { origin: true });
+  app.register(cors, { origin: true, methods: ["GET", "POST", "PUT", "PATCH", "DELETE"] });
   app.register(multipart);
   app.setErrorHandler(errorHandler);
 
