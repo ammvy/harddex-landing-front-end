@@ -2,6 +2,7 @@ import type { FastifyInstance } from "fastify";
 import type { UserController } from "@/controllers/user.controller";
 import { errorResponseDTO, paramIdDTO } from "../dtos/user.schema";
 import { ZodTypeProvider } from "fastify-type-provider-zod";
+import z from "zod";
 
 export function deleteUserRoute(controller: UserController) {
   return async (app: FastifyInstance) => {
@@ -13,10 +14,7 @@ export function deleteUserRoute(controller: UserController) {
           tags: ["Users"],
           params: paramIdDTO,
           response: {
-            204: {
-              type: "null",
-              description: "Usuário removido com sucesso",
-            },
+            204: z.null().describe("Usuário removido com sucesso"),
             404: errorResponseDTO,
           },
         },

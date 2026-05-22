@@ -5,7 +5,11 @@ import swagger from "@fastify/swagger";
 import swaggerUi from "@fastify/swagger-ui";
 import { errorHandler } from "@/middlewares/error-handler";
 import { env } from "@/config/env";
-import { serializerCompiler, validatorCompiler } from "fastify-type-provider-zod";
+import {
+  serializerCompiler,
+  validatorCompiler,
+  jsonSchemaTransform,
+} from "fastify-type-provider-zod";
 
 import { UserDAO } from "@/dao";
 import { UserService } from "@/services";
@@ -40,6 +44,7 @@ export function buildApp() {
         },
       ],
     },
+    transform: jsonSchemaTransform,
   });
 
   app.register(swaggerUi, {
@@ -48,7 +53,7 @@ export function buildApp() {
       docExpansion: "list",
       deepLinking: false,
     },
-    staticCSP: true,
+    staticCSP: false,
   });
 
   const db = createDatabase(env.DATABASE_URL);

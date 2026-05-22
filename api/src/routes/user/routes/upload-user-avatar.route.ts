@@ -13,17 +13,6 @@ export function uploadUserAvatarRoute(controller: UserController) {
           tags: ["Users"],
           params: paramIdDTO,
           consumes: ["multipart/form-data"],
-          body: {
-            type: "object",
-            required: ["avatar"],
-            properties: {
-              avatar: {
-                type: "string",
-                format: "binary",
-                description: "Arquivo de imagem do avatar (JPEG, PNG, etc.)",
-              },
-            },
-          },
           response: {
             200: userSuccessResponseDTO,
             404: errorResponseDTO,
