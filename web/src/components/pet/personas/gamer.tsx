@@ -3,8 +3,9 @@
 import { CatHead } from "../cat-head";
 
 export function GamerPersona() {
-  const ACCENT = "var(--primary)";
-  const CAT_WHITE = "var(--card)";
+  const ACCENT = "var(--mouse-accent, #3a70f4)";
+  const CAT_WHITE = "var(--mouse-body, #e7eaea)";
+  const DETAIL = "var(--mouse-detail, #0a0a0a)";
 
   return (
     <svg viewBox="0 0 100 100" className="w-4/5 h-4/5">
@@ -24,7 +25,7 @@ export function GamerPersona() {
         width="7"
         height="12"
         rx="2"
-        fill="#0A0A0A"
+        fill={DETAIL}
         opacity="0.35"
       />
       <rect
@@ -33,7 +34,7 @@ export function GamerPersona() {
         width="7"
         height="12"
         rx="2"
-        fill="#0A0A0A"
+        fill={DETAIL}
         opacity="0.35"
       />
       <path

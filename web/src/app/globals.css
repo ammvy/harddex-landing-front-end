@@ -4,11 +4,12 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
-
-@custom-variant dark (&:is(.dark *));
-
 @import "../styles/variables.css";
 @import "../styles/dark.css";
 @import "../styles/theme.css";
 @import "../styles/base.css";
 @import "../styles/animations.css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* Force rebuild to update Tailwind theme colors */

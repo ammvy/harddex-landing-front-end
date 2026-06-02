@@ -3,8 +3,9 @@
 import { CatHead } from "../cat-head";
 
 export function ProPersona() {
-  const ACCENT = "var(--primary)";
-  const CAT_WHITE = "var(--card)";
+  const ACCENT = "var(--mouse-accent, #3a70f4)";
+  const CAT_WHITE = "var(--mouse-body, #e7eaea)";
+  const DETAIL = "var(--mouse-detail, #0a0a0a)";
 
   return (
     <svg viewBox="0 0 100 100" className="w-4/5 h-4/5">
@@ -28,7 +29,7 @@ export function ProPersona() {
       <path d="M 46 72 L 54 72 L 56 88 L 50 92 L 44 88 Z" fill={ACCENT} />
       <path
         d="M 46 72 L 54 72 L 53.5 76 L 46.5 76 Z"
-        fill="#0A0A0A"
+        fill={DETAIL}
         opacity="0.25"
       />
     </svg>

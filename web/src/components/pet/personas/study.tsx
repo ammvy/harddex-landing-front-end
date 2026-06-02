@@ -3,16 +3,17 @@
 import { CatHead } from "../cat-head";
 
 export function StudyPersona() {
-  const ACCENT = "var(--primary)";
-  const CAT_WHITE = "var(--card)";
+  const ACCENT = "var(--mouse-accent, #3a70f4)";
+  const CAT_WHITE = "var(--mouse-body, #e7eaea)";
+  const DETAIL = "var(--mouse-detail, #0a0a0a)";
   
   return (
     <svg viewBox="0 0 100 100" className="w-4/5 h-4/5">
       <CatHead />
       <circle cx="38" cy="44" r="3" fill={CAT_WHITE} />
       <circle cx="62" cy="44" r="3" fill={CAT_WHITE} />
-      <circle cx="38" cy="44" r="2" fill="#0A0A0A" />
-      <circle cx="62" cy="44" r="2" fill="#0A0A0A" />
+      <circle cx="38" cy="44" r="2" fill={DETAIL} />
+      <circle cx="62" cy="44" r="2" fill={DETAIL} />
       <circle
         cx="38"
         cy="44"
@@ -62,7 +63,7 @@ export function StudyPersona() {
       />
       <path
         d="M 50 70 L 50 88"
-        stroke="#0A0A0A"
+        stroke={DETAIL}
         strokeWidth="1.2"
         opacity="0.45"
       />
