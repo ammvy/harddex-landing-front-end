@@ -1,11 +1,11 @@
 CREATE TYPE "public"."permission_enum" AS ENUM('ADMIN', 'USER', 'CURATOR');--> statement-breakpoint
-CREATE TYPE "public"."user_level_enum" AS ENUM('BASIC', 'INTERMEDIATE', 'ADVANCED', 'GAMER', 'PROFESSIONAL');--> statement-breakpoint
+CREATE TYPE "public"."user_style_enum" AS ENUM('BASIC', 'INTERMEDIATE', 'ADVANCED', 'GAMER', 'PROFESSIONAL');--> statement-breakpoint
 CREATE TABLE "users" (
 	"id" serial PRIMARY KEY NOT NULL,
 	"name" varchar(255) NOT NULL,
 	"email" varchar(255) NOT NULL,
 	"password" varchar(255) NOT NULL,
-	"level" "user_level_enum" DEFAULT 'BASIC',
+	"style" "user_style_enum" DEFAULT 'BASIC',
 	"permission" "permission_enum" DEFAULT 'USER',
 	CONSTRAINT "users_email_unique" UNIQUE("email")
 );

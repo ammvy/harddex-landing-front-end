@@ -1,6 +1,6 @@
 import { pgTable, pgEnum, serial, varchar } from 'drizzle-orm/pg-core';
 
-export const userLevelEnum = pgEnum('user_level_enum', [
+export const userStyleEnum = pgEnum('user_style_enum', [
   'BASIC',
   'INTERMEDIATE',
   'ADVANCED',
@@ -19,7 +19,7 @@ export const users = pgTable('users', {
   name: varchar('name', { length: 255 }).notNull(),
   email: varchar('email', { length: 255 }).notNull().unique(),
   password: varchar('password', { length: 255 }).notNull(),
-  level: userLevelEnum('level').default('BASIC'),
+  style: userStyleEnum('style').default('BASIC'),
   permission: permissionEnum('permission').default('USER'),
 });
 

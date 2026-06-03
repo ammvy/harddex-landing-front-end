@@ -1,5 +1,5 @@
 {
-  "id": "965df1d1-3608-453e-8c1d-1ae0c53498b4",
+  "id": "f3054bf7-34e3-4eca-a82e-a70f4978e6f0",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "version": "7",
   "dialect": "postgresql",
@@ -32,9 +32,9 @@
           "primaryKey": false,
           "notNull": true
         },
-        "level": {
-          "name": "level",
-          "type": "user_level_enum",
+        "style": {
+          "name": "style",
+          "type": "user_style_enum",
           "typeSchema": "public",
           "primaryKey": false,
           "notNull": false,
@@ -537,8 +537,8 @@
         "CURATOR"
       ]
     },
-    "public.user_level_enum": {
-      "name": "user_level_enum",
+    "public.user_style_enum": {
+      "name": "user_style_enum",
       "schema": "public",
       "values": [
         "BASIC",
