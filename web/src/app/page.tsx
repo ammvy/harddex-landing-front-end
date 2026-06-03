@@ -16,9 +16,24 @@ export default function Home() {
         />
       </Container>
       <Container className="flex-row gap-20">
-        <StudyPersona className="w-full max-w-[200px]" />
-        <GamerPersona className="w-full max-w-[200px]" />
-        <ProPersona className="w-full max-w-[200px]" />
+        <div className="bg-foreground p-10 relative group">
+          <StudyPersona className="w-full max-w-[200px] group-hover:scale-105 transition-all duration-300 ease-in-out" />
+          <span className="uppercase tracking-widest text-[.8rem] text-foreground absolute -bottom-8 left-2">
+            Estudo
+          </span>
+        </div>
+        <div className="bg-foreground p-10 relative group">
+          <GamerPersona className="w-full max-w-[200px] group-hover:scale-105 transition-all duration-300 ease-in-out" />
+          <span className="uppercase tracking-widest text-[.8rem] text-foreground absolute -bottom-8 left-2">
+            Gamer
+          </span>
+        </div>
+        <div className="bg-foreground p-10 relative group">
+          <ProPersona className="w-full max-w-[200px] group-hover:scale-105 transition-all duration-300 ease-in-out" />
+          <span className="uppercase tracking-widest text-[.8rem] text-foreground absolute -bottom-8 left-2">
+            Pro
+          </span>
+        </div>
       </Container>
     </div>
   );
