@@ -15,11 +15,11 @@ export default function Home() {
           containerClassName="absolute bottom-4 left-1/2 -translate-x-1/2"
         />
       </Container>
-      <main className="flex flex-col items-center justify-center gap-6">
-        <StudyPersona />
-        <GamerPersona />
-        <ProPersona />
-      </main>
+      <Container className="flex-row gap-20">
+        <StudyPersona className="w-full max-w-[200px]" />
+        <GamerPersona className="w-full max-w-[200px]" />
+        <ProPersona className="w-full max-w-[200px]" />
+      </Container>
     </div>
   );
 }

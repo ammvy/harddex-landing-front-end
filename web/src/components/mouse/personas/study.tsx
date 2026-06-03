@@ -1,19 +1,27 @@
 "use client";
 
 import { CatHead } from "../cat-head";
+import { cn } from "@/lib/utils";
 
-export function StudyPersona() {
+export function StudyPersona({
+  className,
+  ...props
+}: React.ComponentProps<"svg">) {
   const ACCENT = "var(--mouse-accent, #3a70f4)";
   const CAT_WHITE = "var(--mouse-body, #e7eaea)";
   const DETAIL = "var(--mouse-detail, #0a0a0a)";
-  
+
   return (
-    <svg viewBox="0 0 100 100" className="w-4/5 h-4/5">
+    <svg
+      viewBox="0 0 100 100"
+      className={cn("w-full h-full", className)}
+      {...props}
+    >
       <CatHead />
       <circle cx="38" cy="44" r="3" fill={CAT_WHITE} />
       <circle cx="62" cy="44" r="3" fill={CAT_WHITE} />
-      <circle cx="38" cy="44" r="2" fill={DETAIL} />
-      <circle cx="62" cy="44" r="2" fill={DETAIL} />
+      <circle cx="38" cy="44" r="2" fill="black" />
+      <circle cx="62" cy="44" r="2" fill="black" />
       <circle
         cx="38"
         cy="44"

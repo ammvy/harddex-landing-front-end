@@ -1,14 +1,22 @@
 "use client";
 
 import { CatHead } from "../cat-head";
+import { cn } from "@/lib/utils";
 
-export function GamerPersona() {
+export function GamerPersona({
+  className,
+  ...props
+}: React.ComponentProps<"svg">) {
   const ACCENT = "var(--mouse-accent, #3a70f4)";
   const CAT_WHITE = "var(--mouse-body, #e7eaea)";
   const DETAIL = "var(--mouse-detail, #0a0a0a)";
 
   return (
-    <svg viewBox="0 0 100 100" className="w-4/5 h-4/5">
+    <svg
+      viewBox="0 0 100 100"
+      className={cn("w-full h-full", className)}
+      {...props}
+    >
       <CatHead />
       <path
         d="M 16 36 Q 16 8 50 8 Q 84 8 84 36"

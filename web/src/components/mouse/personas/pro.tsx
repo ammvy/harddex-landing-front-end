@@ -1,14 +1,22 @@
 "use client";
 
 import { CatHead } from "../cat-head";
+import { cn } from "@/lib/utils";
 
-export function ProPersona() {
+export function ProPersona({
+  className,
+  ...props
+}: React.ComponentProps<"svg">) {
   const ACCENT = "var(--mouse-accent, #3a70f4)";
   const CAT_WHITE = "var(--mouse-body, #e7eaea)";
   const DETAIL = "var(--mouse-detail, #0a0a0a)";
 
   return (
-    <svg viewBox="0 0 100 100" className="w-4/5 h-4/5">
+    <svg
+      viewBox="0 0 100 100"
+      className={cn("w-full h-full", className)}
+      {...props}
+    >
       <CatHead />
       <path
         d="M 14 92 L 14 78 Q 14 64 30 64 L 70 64 Q 86 64 86 78 L 86 92 Z"
