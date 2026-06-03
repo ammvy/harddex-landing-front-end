@@ -1,9 +1,9 @@
 import { ScrollToBounce } from "@/components/scroll-to-bounce";
 import Container from "@/components/ui/container";
 import Logo from "@/components/logo";
-import { GamerPersona } from "@/components/pet/personas/gamer";
-import { StudyPersona } from "@/components/pet/personas/study";
-import { ProPersona } from "@/components/pet/personas/pro";
+import { GamerPersona } from "@/components/mouse/personas/gamer";
+import { StudyPersona } from "@/components/mouse/personas/study";
+import { ProPersona } from "@/components/mouse/personas/pro";
 
 export default function Home() {
   return (
