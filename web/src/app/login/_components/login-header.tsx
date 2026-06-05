@@ -17,7 +17,6 @@ export default function LoginHeader() {
           <ArrowLeft size={12} strokeWidth={1.8} />
           Voltar
         </Link>
-        <SectionLabel>§ Acesso / 2026</SectionLabel>
         <ThemeToggle />
       </div>
     </div>

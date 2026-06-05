@@ -29,9 +29,6 @@ export default function Login() {
             <Logo size="sm" />
 
             <div className="mt-10">
-              <SectionLabel className="mb-3">
-                § 01 / Identificação
-              </SectionLabel>
               <h1
                 style={{
                   fontFamily: "'Space Mono', monospace",
@@ -48,9 +45,9 @@ export default function Login() {
               </p>
             </div>
 
-            <SocialAuthButtons />
+            {/* <SocialAuthButtons /> */}
 
-            <Divider label="ou via e-mail" />
+            <Divider label="" />
 
             <LoginForm />
 

@@ -39,9 +39,12 @@ export default function LoginForm() {
           className="uppercase tracking-widest text-[10px] text-foreground/60 flex justify-between"
         >
           <span>Senha</span>
-          <a href="#" className="hover:text-primary transition-colors duration-100">
+          {/* <a
+            href="#"
+            className="hover:text-primary transition-colors duration-100"
+          >
             Esqueci ↗
-          </a>
+          </a> */}
         </span>
         <input
           type="password"
@@ -54,30 +57,10 @@ export default function LoginForm() {
         />
       </label>
 
-      <label className="flex items-center gap-3 cursor-pointer select-none mt-1">
-        <button
-          type="button"
-          onClick={() => setRemember((r) => !r)}
-          className="w-4 h-4 border border-foreground flex items-center justify-center transition-colors duration-75 cursor-pointer"
-          style={{
-            background: remember ? "var(--primary)" : "transparent",
-            borderColor: remember ? "var(--primary)" : undefined,
-          }}
-        >
-          {remember && <span className="w-2 h-2 bg-primary-foreground" />}
-        </button>
-        <span
-          style={{ fontFamily: "'Space Mono', monospace" }}
-          className="uppercase tracking-widest text-[10px] text-foreground/70"
-        >
-          Manter sessão ativa
-        </span>
-      </label>
-
       <button
         type="submit"
         style={{ fontFamily: "'Space Mono', monospace" }}
-        className="bg-foreground text-background px-5 py-4 uppercase tracking-widest text-[12px] flex items-center justify-between hover:bg-primary hover:text-primary-foreground transition-colors duration-100 mt-2 cursor-pointer"
+        className="bg-foreground text-background px-5 py-4 uppercase tracking-widest text-[12px] flex items-center justify-between hover:bg-primary transition-colors duration-100 mt-2 cursor-pointer dark:hover:text-foreground"
       >
         <span>Entrar no Index</span>
         <ArrowRight size={14} strokeWidth={1.6} />
