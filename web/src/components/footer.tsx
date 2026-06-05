@@ -18,13 +18,13 @@ function Footer() {
           </span>
         </div>
         <div className="col-span-12 md:col-span-4 flex md:justify-center gap-5 text-[12px] lowercase">
-          <a href="#" className="hover:text-[#3D7FFF]">
+          <a href="#" className="hover:text-primary">
             instagram
           </a>
-          <a href="#" className="hover:text-[#3D7FFF]">
+          <a href="#" className="hover:text-primary">
             github
           </a>
-          <a href="#" className="hover:text-[#3D7FFF]">
+          <a href="#" className="hover:text-primary">
             discord
           </a>
         </div>
