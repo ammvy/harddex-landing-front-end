@@ -33,12 +33,13 @@ export default function SignupSidePanel() {
             className="w-1.5 h-1.5 block bg-primary"
           />
           <span className="uppercase tracking-widest text-[10px] text-background/70">
-            Onboarding · 01/02
+            Onboarding
+            {/* · 01/02 */}
           </span>
         </div>
-        <span className="uppercase tracking-widest text-[10px] text-background/40">
+        {/* <span className="uppercase tracking-widest text-[10px] text-background/40">
           P-NEW
-        </span>
+        </span> */}
       </div>
 
       <div className="flex-1 flex items-center justify-center px-10">

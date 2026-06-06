@@ -50,9 +50,9 @@ export default function SignupForm() {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
-      <SocialAuthButtons />
+      {/* <SocialAuthButtons />
 
-      <Divider label="ou com e-mail" />
+      <Divider label="ou com e-mail" /> */}
 
       <div className="flex flex-col gap-4">
         {/* Campo: Nome */}

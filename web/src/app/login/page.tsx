@@ -47,6 +47,8 @@ export default function Login() {
 
             {/* <SocialAuthButtons /> */}
 
+            {/* <Divider label="ou com e-mail" /> */}
+
             <Divider label="" />
 
             <LoginForm />
