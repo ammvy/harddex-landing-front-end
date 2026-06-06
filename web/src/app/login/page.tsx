@@ -2,13 +2,11 @@
 
 import { motion } from "motion/react";
 import Logo from "@/app/_components/logo";
-import SectionLabel from "@/components/section-label";
 import Divider from "@/components/divider";
-import LoginHeader from "./_components/login-header";
-import SocialAuthButtons from "./_components/social-auth-buttons";
 import LoginForm from "./_components/login-form";
 import LoginFooterCta from "./_components/login-footer-cta";
 import LoginSidePanel from "./_components/login-side-panel";
+import Header from "@/components/header";
 
 export default function Login() {
   return (
@@ -16,7 +14,7 @@ export default function Login() {
       className="min-h-screen w-full bg-background text-foreground transition-colors duration-200"
       style={{ fontFamily: "'Inter Tight', sans-serif" }}
     >
-      <LoginHeader />
+      <Header label="§ Login / 2026" />
 
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12 grid grid-cols-12 min-h-[calc(100vh-66px)]">
         <motion.section

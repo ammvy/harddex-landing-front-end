@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 
 export default function SocialAuthButtons() {
   const providers = [

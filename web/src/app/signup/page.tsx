@@ -2,10 +2,10 @@
 
 import { motion } from "motion/react";
 import Logo from "@/app/_components/logo";
-import SignupHeader from "./_components/signup-header";
 import SignupForm from "./_components/signup-form";
 import SignupFooterCta from "./_components/signup-footer-cta";
 import SignupSidePanel from "./_components/signup-side-panel";
+import Header from "../../components/header";
 
 export default function Signup() {
   return (
@@ -13,7 +13,7 @@ export default function Signup() {
       className="min-h-screen w-full bg-background text-foreground transition-colors duration-200"
       style={{ fontFamily: "'Inter Tight', sans-serif" }}
     >
-      <SignupHeader />
+      <Header label="§ Cadastro / 2026" />
 
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12 grid grid-cols-12 min-h-[calc(100vh-66px)]">
         <motion.section
@@ -37,8 +37,8 @@ export default function Signup() {
                 Crie sua conta<span className="text-primary">.</span>
               </h1>
               <p className="mt-3 text-[13px] text-foreground/70 max-w-sm">
-                Nome, e-mail e senha pra começar. Depois você decide se faz o quiz
-                pra calibrar suas recomendações.
+                Nome, e-mail e senha pra começar. Depois você decide se faz o
+                quiz pra calibrar suas recomendações.
               </p>
             </div>
 

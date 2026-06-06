@@ -4,7 +4,11 @@ import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import ThemeToggle from "@/components/theme-toggle";
 
-export default function SignupHeader() {
+type HeaderProps = {
+  label: string;
+};
+
+export default function Header({ label }: HeaderProps) {
   return (
     <div className="border-b border-border">
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12 py-5 flex items-center justify-between">
@@ -16,12 +20,14 @@ export default function SignupHeader() {
           <ArrowLeft size={12} strokeWidth={1.8} />
           Voltar
         </Link>
-        <span
-          style={{ fontFamily: "'Space Mono', monospace" }}
-          className="uppercase tracking-widest text-[10px] text-foreground/50"
-        >
-          § Cadastro / 2026
-        </span>
+        {label && (
+          <span
+            style={{ fontFamily: "'Space Mono', monospace" }}
+            className="uppercase tracking-widest text-[10px] text-foreground/50"
+          >
+            {label}
+          </span>
+        )}
         <ThemeToggle />
       </div>
     </div>

@@ -1,12 +1,10 @@
 "use client";
 
-import React, { useState } from "react";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { useRouter } from "next/navigation";
-import SocialAuthButtons from "./social-auth-buttons";
-import Divider from "@/components/divider";
 import QuizBanner from "./quiz-banner";
 import SignupActions from "./signup-actions";
 
