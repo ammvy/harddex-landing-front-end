@@ -29,7 +29,7 @@ export function DevicePicker({
         className="w-full text-left border border-foreground px-4 py-3 flex items-center justify-between gap-3 hover:border-primary transition-colors duration-100 bg-background text-foreground cursor-pointer"
       >
         <div className="flex items-center gap-3 min-w-0">
-          <span
+          {/* <span
             style={{
               fontFamily: "'Space Mono', monospace",
               background: value.accent,
@@ -37,7 +37,7 @@ export function DevicePicker({
             className="w-7 h-7 flex items-center justify-center uppercase tracking-widest text-[10px] text-white shrink-0 font-bold"
           >
             {slot}
-          </span>
+          </span> */}
           <div className="min-w-0">
             <div
               style={{ fontFamily: "'Space Mono', monospace" }}

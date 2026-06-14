@@ -3,21 +3,12 @@
 import { useCompare } from "./_hooks/use-compare";
 import Header from "@/components/header";
 import { DevicePicker } from "./_components/device-picker";
-import { ControlsBar } from "./_components/controls-bar";
-import { HeroCard } from "./_components/hero-card";
 import { SpecSection } from "./_components/spec-section";
-import { FooterCta } from "./_components/footer-cta";
+import { shouldShow } from "./_data/spec-builders";
 
 export default function ComparePage() {
   const {
-    category,
-    setCategory,
     detail,
-    setDetail,
-    profile,
-    setProfile,
-    profileOpen,
-    setProfileOpen,
     pickerA,
     setPickerA,
     pickerB,
@@ -97,18 +88,24 @@ export default function ComparePage() {
 
         {/* Spec Sections */}
         <div className="mt-10 space-y-10">
-          {sections.map((sec) => (
-            <SpecSection
-              key={sec.section}
-              sectionTitle={sec.section}
-              rows={sec.rows}
-              detail={detail}
-            />
-          ))}
-        </div>
+          {sections.map((sec) => {
+            const visibleRows = sec.rows
+              .filter((r) => shouldShow(r.level, detail))
+              .map((r) => ({
+                title: r.label,
+                value1: r.a.display,
+                value2: r.b.display,
+              }));
 
-        {/* Footer CTA */}
-        <FooterCta profile={profile} />
+            return (
+              <SpecSection
+                key={sec.section}
+                sectionTitle={sec.section}
+                rows={visibleRows}
+              />
+            );
+          })}
+        </div>
       </main>
     </div>
   );

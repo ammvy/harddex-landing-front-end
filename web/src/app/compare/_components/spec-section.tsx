@@ -1,17 +1,16 @@
-import { RowSpec, Detail } from "../_data/types";
-import { SpecRow } from "./spec-row";
-import { shouldShow } from "../_data/spec-builders";
+interface SimpleRow {
+  title: string;
+  value1: string;
+  value2: string;
+}
 
 interface SpecSectionProps {
   sectionTitle: string;
-  rows: RowSpec[];
-  detail: Detail;
+  rows: SimpleRow[];
 }
 
-export function SpecSection({ sectionTitle, rows, detail }: SpecSectionProps) {
-  const visibleRows = rows.filter((r) => shouldShow(r.level, detail));
-
-  if (!visibleRows.length) return null;
+export function SpecSection({ sectionTitle, rows }: SpecSectionProps) {
+  if (!rows.length) return null;
 
   return (
     <section>
@@ -21,27 +20,47 @@ export function SpecSection({ sectionTitle, rows, detail }: SpecSectionProps) {
             fontFamily: "'Space Mono', monospace",
             letterSpacing: "-0.02em",
           }}
-          className="uppercase text-[18px] leading-none text-foreground font-bold"
+          className="uppercase text-[40px] leading-none text-foreground font-bold mt-4 pb-2"
         >
           {sectionTitle}
         </h2>
-        <span
-          style={{ fontFamily: "'Space Mono', monospace" }}
-          className="uppercase tracking-widest text-[10px] opacity-50 text-foreground"
-        >
-          {visibleRows.length}{" "}
-          {visibleRows.length === 1 ? "item" : "itens"}
-        </span>
       </div>
       <div className="border border-foreground divide-y divide-foreground/10 bg-background">
-        {visibleRows.map((row, i) => (
-          <SpecRow
-            key={`${sectionTitle}-${i}`}
-            row={row}
-            detail={detail}
-            rowIndex={i}
-            sectionTitle={sectionTitle}
-          />
+        {rows.map((row, i) => (
+          <div key={i} className="flex items-stretch">
+            {/* Title Column */}
+            <div className="flex-1 min-w-0 px-2 py-2 border-r border-foreground/10 flex flex-col justify-center">
+              <span
+                style={{
+                  fontFamily: "'Space Mono', monospace",
+                  letterSpacing: "-0.01em",
+                }}
+                className="uppercase text-[14px] leading-tight font-medium"
+              >
+                {row.title}
+              </span>
+            </div>
+
+            {/* Value 1 Column */}
+            <div className="flex-1 min-w-0 p-4 lg:p-5 border-r border-foreground/10 flex items-center justify-center text-center">
+              <span
+                style={{ fontFamily: "'Space Mono', monospace" }}
+                className="uppercase tracking-wide text-[12px] leading-snug text-foreground"
+              >
+                {row.value1}
+              </span>
+            </div>
+
+            {/* Value 2 Column */}
+            <div className="flex-1 min-w-0 p-4 lg:p-5 flex items-center justify-center text-center">
+              <span
+                style={{ fontFamily: "'Space Mono', monospace" }}
+                className="uppercase tracking-wide text-[12px] leading-snug text-foreground"
+              >
+                {row.value2}
+              </span>
+            </div>
+          </div>
         ))}
       </div>
     </section>
