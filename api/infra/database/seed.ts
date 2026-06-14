@@ -453,7 +453,7 @@ async function seed() {
     .values([
       {
         name: "Ryzen 5 5600X",
-        specification: "6 Cores, 12 Threads, 3.7GHz Base",
+        specification: { cores: 6, threads: 12, base_clock: "3.7GHz" },
         averagePrice: 950.0,
         productId: insertedProducts[1].id,
         typeId: insertedTypes[0].id,
@@ -461,7 +461,7 @@ async function seed() {
       },
       {
         name: "Placa-Mãe B550M",
-        specification: "Micro ATX, PCIe 4.0, AM4",
+        specification: { form_factor: "Micro ATX", pcie_version: "4.0", socket: "AM4" },
         averagePrice: 850.0,
         productId: insertedProducts[1].id,
         typeId: insertedTypes[2].id,
@@ -469,7 +469,7 @@ async function seed() {
       },
       {
         name: "RTX 3060 12GB",
-        specification: "GDDR6, Ray Tracing, DLSS",
+        specification: { memory: "12GB GDDR6", ray_tracing: true, dlss: true },
         averagePrice: 1800.0,
         productId: insertedProducts[0].id,
         typeId: insertedTypes[1].id,
@@ -477,7 +477,7 @@ async function seed() {
       },
       {
         name: "Core i7-12700F",
-        specification: "12 Cores, 20 Threads, up to 4.9GHz",
+        specification: { cores: 12, threads: 20, boost_clock: "4.9GHz" },
         averagePrice: 1900.0,
         productId: insertedProducts[0].id,
         typeId: insertedTypes[0].id,
@@ -485,7 +485,7 @@ async function seed() {
       },
       {
         name: "Kingston Fury 8GB DDR4",
-        specification: "3200MHz CL16 DIMM RAM",
+        specification: { capacity: "8GB", type: "DDR4", speed: "3200MHz", latency: "CL16", form_factor: "DIMM" },
         averagePrice: 190.0,
         productId: insertedProducts[0].id,
         typeId: insertedTypes[3].id,
@@ -493,7 +493,7 @@ async function seed() {
       },
       {
         name: "Samsung 980 Pro 1TB",
-        specification: "NVMe M.2 SSD, PCIe 4.0",
+        specification: { capacity: "1TB", form_factor: "M.2", interface: "PCIe 4.0 NVMe" },
         averagePrice: 650.0,
         productId: insertedProducts[0].id,
         typeId: insertedTypes[4].id,
@@ -501,7 +501,7 @@ async function seed() {
       },
       {
         name: "Corsair RM850x PSU",
-        specification: "850 Watt modular power supply unit",
+        specification: { wattage: "850W", modularity: "Full", type: "Power Supply Unit" },
         averagePrice: 890.0,
         productId: insertedProducts[0].id,
         typeId: insertedTypes[6].id,
@@ -509,7 +509,7 @@ async function seed() {
       },
       {
         name: "Intel Stock Cooler",
-        specification: "Basic processor heatsink fan",
+        specification: { type: "Heatsink Fan", compatibility: "Intel" },
         averagePrice: 40.0,
         productId: insertedProducts[13].id,
         typeId: insertedTypes[7].id,
@@ -517,7 +517,7 @@ async function seed() {
       },
       {
         name: "Seagate BarraCuda 2TB",
-        specification: "7200 RPM 3.5 SATA internal hard disk",
+        specification: { capacity: "2TB", rpm: 7200, form_factor: "3.5 inch", interface: "SATA" },
         averagePrice: 350.0,
         productId: insertedProducts[13].id,
         typeId: insertedTypes[5].id,
@@ -525,7 +525,7 @@ async function seed() {
       },
       {
         name: "ASUS ROG B660-F",
-        specification: "ATX motherboard for Intel 12th gen",
+        specification: { form_factor: "ATX", compatibility: "Intel 12th gen" },
         averagePrice: 1300.0,
         productId: insertedProducts[13].id,
         typeId: insertedTypes[2].id,
@@ -533,7 +533,7 @@ async function seed() {
       },
       {
         name: "Crucial MX500 500GB",
-        specification: "SATA 2.5 inch internal solid state drive",
+        specification: { capacity: "500GB", form_factor: "2.5 inch", interface: "SATA" },
         averagePrice: 280.0,
         productId: insertedProducts[13].id,
         typeId: insertedTypes[4].id,
@@ -541,7 +541,7 @@ async function seed() {
       },
       {
         name: "Razer Optical Click Switches",
-        specification: "Replacement switches for gaming mouse",
+        specification: { type: "Replacement switches", application: "Gaming mouse" },
         averagePrice: 80.0,
         productId: insertedProducts[5].id,
         typeId: insertedTypes[9].id,
@@ -549,7 +549,7 @@ async function seed() {
       },
       {
         name: "Redragon RGB Fan Set",
-        specification: "3-pack 120mm customizable fans",
+        specification: { quantity: 3, size: "120mm", features: "Customizable RGB" },
         averagePrice: 120.0,
         productId: insertedProducts[3].id,
         typeId: insertedTypes[8].id,
@@ -557,7 +557,7 @@ async function seed() {
       },
       {
         name: "HyperX Cloud Replacement Cord",
-        specification: "3.5mm braided jack audio cable",
+        specification: { connector: "3.5mm jack", material: "Braided" },
         averagePrice: 45.0,
         productId: insertedProducts[7].id,
         typeId: insertedTypes[12].id,
@@ -565,7 +565,7 @@ async function seed() {
       },
       {
         name: "Thermal Grizzly Paste",
-        specification: "Kryonaut high efficiency thermal grease",
+        specification: { model: "Kryonaut", efficiency: "High" },
         averagePrice: 75.0,
         productId: insertedProducts[1].id,
         typeId: insertedTypes[11].id,
