@@ -32,7 +32,12 @@ export function ProfilePreviewGrid() {
             </span>
             <span className="absolute top-2 right-2 w-1.5 h-1.5 bg-primary opacity-0 group-hover:opacity-100 transition-opacity duration-150" />
             <div className="w-full flex-1 flex items-center justify-center pt-3">
-              <div className="w-[82%]">{MINI_CATS[pid]()}</div>
+              <div className="w-[82%]">
+                {(() => {
+                  const MiniCatComp = MINI_CATS[pid];
+                  return MiniCatComp ? <MiniCatComp /> : null;
+                })()}
+              </div>
             </div>
             <span
               style={{ fontFamily: "'Space Mono', monospace" }}

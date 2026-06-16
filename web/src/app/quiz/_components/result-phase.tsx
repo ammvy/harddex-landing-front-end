@@ -55,7 +55,10 @@ export function ResultPhase({
             }}
             className="flex-1 flex items-center justify-center px-8"
           >
-            {CATS[winner]()}
+            {(() => {
+              const CatComp = CATS[winner];
+              return CatComp ? <CatComp /> : null;
+            })()}
           </motion.div>
           <div
             className="px-6 pb-6 border-t border-white/15 pt-5 font-mono-brand"
