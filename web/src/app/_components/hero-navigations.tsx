@@ -18,18 +18,21 @@ function HeroNavigations() {
       desc: "Lado a lado, especificação por especificação.",
       Art: GitDiffIcon,
       code: "§ 01",
+      href: "/compare",
     },
     {
       title: "Descubra",
       desc: "Catálogo curado, sem ruído, sem patrocínio.",
       Art: BinocularsIcon,
       code: "§ 02",
+      href: "/#",
     },
     {
       title: "Resolva",
       desc: "Recomendação técnica para o seu uso real.",
       Art: FlagBannerFoldIcon,
       code: "§ 03",
+      href: "/#",
     },
   ];
 
@@ -61,6 +64,7 @@ function HeroNavigations() {
                 `group border aspect-square flex flex-col relative overflow-hidden transition-colors duration-250`,
                 `hover:bg-primary light:hover:text-background text-left`,
               )}
+              href={c.href}
             >
               <div
                 className={`flex items-center justify-between px-5 pt-4`}

@@ -108,7 +108,7 @@ export default function ComparePage() {
           })}
         </div>
 
-        <AskMouse />
+        <AskMouse deviceA={a} deviceB={b} />
       </main>
     </div>
   );
