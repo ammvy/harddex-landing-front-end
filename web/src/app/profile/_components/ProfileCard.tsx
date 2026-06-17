@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { 
   ShieldCheck, 
   Gamepad2, 
@@ -194,6 +195,25 @@ export default function ProfileCard({ user, onUpdateUser, onLogout }: ProfileCar
                   </option>
                 ))}
               </select>
+            </div>
+
+            {/* Quiz Suggestion Banner */}
+            <div className="p-3.5 rounded-xl border border-primary/20 bg-primary/5 dark:bg-primary/10 text-left space-y-2">
+              <div className="flex gap-2">
+                <Sparkles className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+                <div className="space-y-1">
+                  <h4 className="text-xs font-bold text-zinc-900 dark:text-white">Quer um perfil mais preciso?</h4>
+                  <p className="text-[11px] text-zinc-500 dark:text-muted-foreground leading-normal">
+                    Seus estilos de mouse são definidos pelas suas respostas. Refaça o quiz para recalcular a sua persona automaticamente!
+                  </p>
+                </div>
+              </div>
+              <Link
+                href="/quiz"
+                className="inline-flex w-full items-center justify-center py-1.5 px-3 rounded-lg bg-zinc-100 dark:bg-white/5 border border-zinc-200 dark:border-white/10 text-zinc-800 dark:text-white text-xs font-semibold hover:bg-zinc-200/50 dark:hover:bg-white/10 transition-colors"
+              >
+                Refazer o Quiz
+              </Link>
             </div>
 
             {/* Edit Mode Buttons */}
