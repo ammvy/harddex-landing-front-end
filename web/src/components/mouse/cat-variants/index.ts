@@ -8,22 +8,34 @@ import { CreativeCat, CreativeMiniCat } from "./creative";
 import { DevCat, DevMiniCat } from "./dev";
 import { MobileCat, MobileMiniCat } from "./mobile";
 
-export type ProfileId = "gamer" | "pro" | "study" | "creative" | "dev" | "mobile";
+export type ProfileId =
+  | "GAMER"
+  | "PRO"
+  | "STUDY"
+  | "CREATIVE"
+  | "DEV"
+  | "MOBILE";
 
-export const CATS: Record<ProfileId, (props: { className?: string }) => JSX.Element> = {
-  gamer: GamerCat,
-  pro: ProCat,
-  study: StudyCat,
-  creative: CreativeCat,
-  dev: DevCat,
-  mobile: MobileCat,
+export const CATS: Record<
+  ProfileId,
+  (props: { className?: string }) => JSX.Element
+> = {
+  GAMER: GamerCat,
+  PRO: ProCat,
+  STUDY: StudyCat,
+  CREATIVE: CreativeCat,
+  DEV: DevCat,
+  MOBILE: MobileCat,
 };
 
-export const MINI_CATS: Record<ProfileId, (props: { className?: string }) => JSX.Element> = {
-  gamer: GamerMiniCat,
-  pro: ProMiniCat,
-  study: StudyMiniCat,
-  creative: CreativeMiniCat,
-  dev: DevMiniCat,
-  mobile: MobileMiniCat,
+export const MINI_CATS: Record<
+  ProfileId,
+  (props: { className?: string }) => JSX.Element
+> = {
+  GAMER: GamerMiniCat,
+  PRO: ProMiniCat,
+  STUDY: StudyMiniCat,
+  CREATIVE: CreativeMiniCat,
+  DEV: DevMiniCat,
+  MOBILE: MobileMiniCat,
 };
