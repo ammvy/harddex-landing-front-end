@@ -18,14 +18,14 @@ export default function ProfilePhoto({ tdu }: ProfilePhotoProps) {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.45, delay: 0.05 }}
       className={cn(
-        "h-full w-full bg-foreground/5 relative flex flex-col items-center justify-center overflow-hidden",
+        "h-full w-full min-h-48 bg-foreground/5 relative flex flex-col items-center justify-center overflow-hidden",
         // "border-2 border-foreground",
       )}
     >
       <MouseAvatar tdu={tdu} isAnimating={false} />
       <Link
         href="/quiz"
-        className="absolute bottom-8 text-sm cursor-pointer text-foreground/80 flex items-center gap-2"
+        className="absolute max-lg:right-8 bottom-8 text-sm cursor-pointer text-foreground/80 flex items-center gap-2"
       >
         <RotateCcw className="w-4 h-4" />
         <span>Refazer quiz</span>

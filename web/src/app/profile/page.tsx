@@ -9,9 +9,7 @@ import ProfileFields from "./_components/profile-fields";
 
 export default function ProfilePage() {
   const { user } = useProfile();
-  const { form, isEditing, startEdit, cancelEdit, onSubmit } = useProfileForm({
-    user,
-  });
+  const { form, isEditing, startEdit, cancelEdit, onSubmit } = useProfileForm({ user });
 
   return (
     <div
