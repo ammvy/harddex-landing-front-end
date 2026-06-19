@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { Device, ProfileId } from "../_data/types";
+import { Device } from "../_data/types";
+import { ProfileId } from "@/components/mouse";
 
 export type OpinionState = "idle" | "loading" | "streaming" | "done" | "error";
 
@@ -9,7 +10,7 @@ export function useMouseOpinion() {
   const [state, setState] = useState<OpinionState>("idle");
   const [response, setResponse] = useState<string>("");
   const [error, setError] = useState<string | null>(null);
-  const [tdu, setTdu] = useState<ProfileId>("gamer");
+  const [tdu, setTdu] = useState<ProfileId>("GAMER");
 
   const reset = () => {
     setState("idle");

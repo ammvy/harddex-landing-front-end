@@ -1,6 +1,7 @@
+import { ProfileId } from "@/components/mouse";
+
 export type Category = "phone" | "laptop";
 export type Detail = "basic" | "mid" | "advanced";
-export type ProfileId = "gamer" | "pro" | "study" | "creative" | "dev" | "mobile";
 
 export interface PhoneSpecs {
   cpu: string;

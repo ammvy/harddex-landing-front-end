@@ -1,4 +1,4 @@
-export type ProfileId = "gamer" | "pro" | "study" | "creative" | "dev" | "mobile";
+import { ProfileId } from "@/components/mouse";
 
 export type Level = 1 | 2 | 3;
 
